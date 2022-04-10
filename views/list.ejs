@@ -8,83 +8,6 @@
 	<%- include('_head') %>
 </head>
 
-<!-- <body>
-	<div class="container">
-		<div class="row">
-			<div class="panel">
-				<div class="panel-heading">
-					<div class="row">
-						<div class="col-sm-12 col-xs-12">
-							<a href="http://localhost:3000/admin/add" class="rounded-3 btn btn-sm btn-primary pull-left"><i class="fa fa-plus-circle"></i>
-								Add New</a>
-							<form class="form-horizontal pull-right">
-								<div class="form-group">
-									<label>Show : </label>
-									<select class="form-control">
-										<option>5</option>
-										<option>10</option>
-										<option>15</option>
-										<option>20</option>
-									</select>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="panel-body table-responsive">
-					<table class="table">
-						<thead>
-							<tr class="align-items-center">
-								<th>STT</th>
-								<th>Sản phẩm</th>
-								<th>Giá</th>
-								<th>Hình ảnh</th>
-								<th>View</th>
-								<th>Action</th>
-							</tr>
-						</thead>
-						<tbody>
-                            <% danhsach.forEach((element,index) => { %>
-                                <tr>
-                                    <td><%= index +1 %> </td>
-                                    <td><%= element.name %> </td>
-                                    <td><%= element.price %> </td>
-                                    <td><img style="width: 80%; height:auto;" src="../public/image/<%= element.image %> " alt=""></td>
-                                    <td><a href="#" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a></td>
-                                    <td>
-                                        <ul class="action-list">
-                                            <li><a href="http://localhost:3000/admin/edit/" class="btn btn-primary "><i class="fa fa-pencil-alt"></i></a>
-                                            </li>
-                                            <li><a href="http://localhost:3000/admin/deleted/<%- element._id %> " class="btn btn-danger"><i class="fa fa-times"></i></a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            <% }) %>
-						</tbody>
-					</table>
-				</div>
-				<div class="panel-footer">
-					<div class="row">
-						<div class="col-sm-6 col-xs-6">------</div>
-						<div class="col-sm-6 col-xs-6">
-							<ul class="pagination hidden-xs pull-right">
-								<li><a class="btn btn-dark" href="#">«</a></li>
-								<li><a class="btn btn-dark active" href="#">1</a></li>
-								<li><a class="btn btn-dark" href="#">2</a></li>
-								<li><a class="btn btn-dark" href="#">3</a></li>
-								<li><a class="btn btn-dark" href="#">4</a></li>
-								<li><a class="btn btn-dark" href="#">5</a></li>
-								<li><a class="btn btn-dark" href="#">»</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-</body> -->
-
 <body>
 	<div class="app-container">
 		<div class="sidebar">
@@ -182,7 +105,7 @@
 						<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
 					</svg>
 				</button>
-				<button class="app-content-headerButton">Add Product</button>
+				<a href="http://localhost:3000/admin/add"><button class="app-content-headerButton">Add Product</button></a>
 			</div>
 			<div class="app-content-actions">
 				<input class="search-bar" placeholder="Search..." type="text">
@@ -306,7 +229,7 @@
 							<span class="cell-label">Status:</span>
 							<span class="status active">Active</span>
 						</div>
-						<div class="product-cell stock"><span class="cell-label">Stock:</span><%- element.soluong  %> </div>
+						<div class="product-cell stock"><span class="cell-label">Stock:</span><%- element.soluong %> </div>
 						<div class="product-cell price"><span class="cell-label">Price:</span><%- element.price %> </div>
 						<div class="product-cell sales d-flex justify-content-around"><span
 								class="cell-label ">Sales:</span>

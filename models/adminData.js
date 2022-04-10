@@ -4,15 +4,15 @@ let schema = mongoose.Schema({
         type: String,
         require: true,
     },
-    image: {
-        type: String,
-        require: true,
-    },
+    image:String,
     soluong: {
-        type: String,
+        type: Number,
         require: true,
     },
-    price: Number,
+    price:{
+        type: Number,
+        require: true,
+    },
     describe: String
 
 })

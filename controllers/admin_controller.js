@@ -45,6 +45,7 @@ exports.add = (req, res) => {
             var product = products({
                 name: req.body.txtName,
                 image: req.file.filename,
+                soluong: req.body.txtSoluong,
                 price: req.body.txtPrice,
                 describe: req.body.txtDescribe,
             })
