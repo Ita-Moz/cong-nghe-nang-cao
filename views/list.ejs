@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('_head') %>
+</head>
+<!-- <body>
+    <% danhsach.forEach(element => { %>
+     <h1><%= element.name %> </h1>
+     <img class="" src="../public/image/<%= element.image %> " alt="">
+     <h3><%= element.price %> </h3>
+    <% }) %>
+
+</body> -->
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="panel">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-sm-12 col-xs-12">
+							<a href="http://localhost:3000/admin/add" class="rounded-3 btn btn-sm btn-primary pull-left"><i class="fa fa-plus-circle"></i>
+								Add New</a>
+							<form class="form-horizontal pull-right">
+								<div class="form-group">
+									<label>Show : </label>
+									<select class="form-control">
+										<option>5</option>
+										<option>10</option>
+										<option>15</option>
+										<option>20</option>
+									</select>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body table-responsive">
+					<table class="table">
+						<thead>
+							<tr class="align-items-center">
+								<th>STT</th>
+								<th>Sản phẩm</th>
+								<th>Giá</th>
+								<th>Hình ảnh</th>
+								<th>View</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+                            <% danhsach.forEach((element,index) => { %>
+                                <tr>
+                                    <td><%= index +1 %> </td>
+                                    <td><%= element.name %> </td>
+                                    <td><%= element.price %> </td>
+                                    <td><img style="width: 80%; height:auto;" src="../public/image/<%= element.image %> " alt=""></td>
+                                    <td><a href="#" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a></td>
+                                    <td>
+                                        <ul class="action-list">
+                                            <li><a href="http://localhost:3000/admin/edit/" class="btn btn-primary "><i class="fa fa-pencil-alt"></i></a>
+                                            </li>
+                                            <li><a href="http://localhost:3000/admin/deleted/<%- element._id %> " class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            <% }) %>
+						</tbody>
+					</table>
+				</div>
+				<div class="panel-footer">
+					<div class="row">
+						<div class="col-sm-6 col-xs-6">------</div>
+						<div class="col-sm-6 col-xs-6">
+							<ul class="pagination hidden-xs pull-right">
+								<li><a class="btn btn-dark" href="#">«</a></li>
+								<li><a class="btn btn-dark active" href="#">1</a></li>
+								<li><a class="btn btn-dark" href="#">2</a></li>
+								<li><a class="btn btn-dark" href="#">3</a></li>
+								<li><a class="btn btn-dark" href="#">4</a></li>
+								<li><a class="btn btn-dark" href="#">5</a></li>
+								<li><a class="btn btn-dark" href="#">»</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

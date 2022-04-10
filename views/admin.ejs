@@ -1,0 +1,20 @@
+<html lang="en">
+
+<%- include('_head')  %> 
+
+<body>
+    <h1>Add product</h1>
+    <form action="http://localhost:3000/admin/add" method="post" enctype="multipart/form-data" class="container-fluid">
+        <label for="" class="form-label">Name:</label>
+        <input class="form-control" type="text" name="txtName">
+        <label for="" class="form-label">Image:</label>
+        <input class="form-control" type="file" name="txtFile">
+        <label for="" class="form-label">Price:</label>
+        <input class="form-control" type="number" name="txtPrice" id="">
+        <label for="" class="form-label">Mo ta:</label>
+        <input class="form-control" type="text" name="txtDescribe">
+        <input type="submit" value="ADD" class=" form-control mt-2 btn btn-light btn-outline-success">
+    </form>
+</body>
+
+</html>
