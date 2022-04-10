@@ -1,12 +1,21 @@
-<html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
 	<%- include('_head') %>
 </head>
+<script>
+	$(document).ready(function () {
+		$('#btn_delete').on('click',() => {
+			let id = $('#btn_delete').attr("data-id");
+			$.ajax({
+				url: `http://localhost:3000/admin/deleted/${id}`,
+				type: 'DELETE',
+				success: function (req, res, response) {
+					res.redirect("http://localhost:3000/admin/dashboard")
+				}
+			});
+		})
+
+	});
+</script>
 
 <body>
 	<div class="app-container">
@@ -105,7 +114,8 @@
 						<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
 					</svg>
 				</button>
-				<a href="http://localhost:3000/admin/add"><button class="app-content-headerButton">Add Product</button></a>
+				<a href="http://localhost:3000/admin/add"><button class="app-content-headerButton">Add
+						Product</button></a>
 			</div>
 			<div class="app-content-actions">
 				<input class="search-bar" placeholder="Search..." type="text">
@@ -208,7 +218,7 @@
 							</svg>
 						</button></div>
 				</div>
-				<% danhsach.forEach(element=> { %>
+				<% danhsach.forEach((element,index)=> { %>
 					<div class="products-row">
 						<button class="cell-more-button">
 							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
@@ -220,21 +230,30 @@
 							</svg>
 						</button>
 						<div class="product-cell image">
-							<img src="../public/image/<%- element.image  %> "
-								alt="product">
-							<span><%- element.name %> </span>
+							<img src="../public/image/<%- element.image  %> " alt="product">
+							<span>
+								<%- element.name %>
+							</span>
 						</div>
-						<div class="product-cell category"><span class="cell-label">Category:</span><%- element.describe  %> </div>
+						<div class="product-cell category"><span class="cell-label">Category:</span>
+							<%- element.describe %>
+						</div>
 						<div class="product-cell status-cell">
 							<span class="cell-label">Status:</span>
 							<span class="status active">Active</span>
 						</div>
-						<div class="product-cell stock"><span class="cell-label">Stock:</span><%- element.soluong %> </div>
-						<div class="product-cell price"><span class="cell-label">Price:</span><%- element.price %> </div>
+						<div class="product-cell stock"><span class="cell-label">Stock:</span>
+							<%- element.soluong %>
+						</div>
+						<div class="product-cell price"><span class="cell-label">Price:</span>
+							<%- element.price %>
+						</div>
 						<div class="product-cell sales d-flex justify-content-around"><span
 								class="cell-label ">Sales:</span>
-							<button class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button>
-							<button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+							<button id="btn_edit" class="btn btn-primary">
+								<i class="fa-solid fa-pen-to-square"></i></button>
+							<button data-id="<%- element._id  %>" id="btn_delete" class="btn btn-danger">
+								<i class="fa-solid fa-trash"></i></button>
 
 						</div>
 					</div>
@@ -242,4 +261,4 @@
 			</div>
 		</div>
 
-</html>
+		</html>

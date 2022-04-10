@@ -1,5 +1,4 @@
 let products = require('../models/adminData')
-
 //multer
 var multer = require('multer');
 var storage = multer.diskStorage({
@@ -61,6 +60,16 @@ exports.add = (req, res) => {
     });
 }
 exports.deleted = (req, res) => {
-   
+    
+    products.findByIdAndDelete(req.params.id, (err) => {
+        if (err) {
+            console.log("Error" + err);
+        } else {
+            res.redirect("http://localhost:3000/admin/dashboard")
+            console.log("vo controller")
+        }
+    })
+
+
 }
 
