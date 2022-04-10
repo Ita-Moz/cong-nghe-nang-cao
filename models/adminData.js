@@ -8,6 +8,10 @@ let schema = mongoose.Schema({
         type: String,
         require: true,
     },
+    soluong: {
+        type: String,
+        require: true,
+    },
     price: Number,
     describe: String
 
