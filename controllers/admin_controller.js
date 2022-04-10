@@ -27,7 +27,7 @@ exports.show = (req, res) => {
         if (err) {
             res.json("Error hien thi")
         } else {
-            res.render('list', { danhsach: data })
+            res.render('dashboard', { danhsach: data })
         }
     })
 }
