@@ -3,30 +3,18 @@ $(document).ready(() => {
   // 
   $('#btn_delete').on('click', () => {
     let id = $('#btn_delete').attr("data-id");
-    // $.ajax({
-    //   url: 'http://localhost:3000/admin/deleted/'+ id,
-    //   type: 'DELETE',
-    //   success: function (kq) {
-    //     // res.redirect("http://localhost:3000/admin/dashboard");
-    //     console.log(kq)
-    //   },
-    //   error: function(){
-    //     console.log(error);
-    //   }
-    // });
     $.ajax({
-      url: 'http://localhost:3000/admin/deleted/' + id,
-      type: 'DELETE'
+      url: 'http://localhost:3000/admin/deleted/'+ id,
+      type: 'DELETE',
+      success: function (kq) {
+        // res.redirect("http://localhost:3000/admin/dashboard");
+        console.log(kq)
+      },
+      error: function(){
+        console.log(error);
+      }
     });
-
-    success(function (kq) {
-      // res.redirect("http://localhost:3000/admin/dashboard");
-      console.log("chao" + kq)
-    })
-
-    error(function () {
-      console.log(error);
-    });
+   
   })
   // 
   document.querySelector(".jsFilter").addEventListener("click", function () {
