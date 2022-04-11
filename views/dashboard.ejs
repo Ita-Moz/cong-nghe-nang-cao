@@ -1,21 +1,6 @@
 <head>
 	<%- include('_head') %>
 </head>
-<script>
-	$(document).ready(function () {
-		$('#btn_delete').on('click',() => {
-			let id = $('#btn_delete').attr("data-id");
-			$.ajax({
-				url: `http://localhost:3000/admin/deleted/${id}`,
-				type: 'DELETE',
-				success: function (req, res, response) {
-					res.redirect("http://localhost:3000/admin/dashboard")
-				}
-			});
-		})
-
-	});
-</script>
 
 <body>
 	<div class="app-container">
