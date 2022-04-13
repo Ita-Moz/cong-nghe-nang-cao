@@ -1,7 +1,7 @@
 <head>
 	<%- include('_head') %>
 </head>
-
+<script src="../controllers/admin_controller.js"></script>
 <body>
 	<div class="app-container">
 		<div class="sidebar">
@@ -237,7 +237,7 @@
 								class="cell-label ">Sales:</span>
 							<button id="btn_edit" class="btn btn-primary">
 								<i class="fa-solid fa-pen-to-square"></i></button>
-							<button data-id="<%- element._id  %>" id="btn_delete" class="btn btn-danger">
+							<button data-id="<%- element._id  %>" class="btn btn-danger btn_delete">
 								<i class="fa-solid fa-trash"></i></button>
 
 						</div>

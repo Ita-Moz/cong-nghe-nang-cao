@@ -61,15 +61,15 @@ exports.add = (req, res) => {
 }
 exports.deleted = (req, res) => {
     
-    products.findByIdAndDelete(req.params.id, (err) => {
-        if (err) {
-            console.log("Error" + err);
-        } else {
-            res.redirect("http://localhost:3000/admin/dashboard")
-            console.log("vo controller")
-        }
-    })
-
-
+        products.findByIdAndDelete(req.params.id, (err, success) => {
+            if (err) {
+                console.log("Error" + err);
+            }else{
+                res.status(200).send();
+            }    
+        });
+   
+    
+    
 }
 
