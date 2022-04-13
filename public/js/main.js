@@ -8,18 +8,16 @@ $(document).ready(function () {
                 type: 'DELETE',
                 url: 'http://localhost:3000/admin/deleted/'+ id,
                 success : function( response) {
-                  window.location.href='http://localhost:3000/admin/dashboard';
-                  
+                  var tam = $('div').attr("data-row"==id)
+                  $(tam).remove(".products-row");
                },
                 error: function(err){
                   console.log(err);
                 }
               });
         }else{
-            console.log("dsad")
+            console.log("404")
         }
-        
-       
       })
 
 

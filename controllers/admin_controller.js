@@ -41,35 +41,34 @@ exports.add = (req, res) => {
         } else if (err) {
             console.log("An unknown error " + err);
         } else {
-            var product = products({
+            products.create({
                 name: req.body.txtName,
                 image: req.file.filename,
                 soluong: req.body.txtSoluong,
                 price: req.body.txtPrice,
                 describe: req.body.txtDescribe,
             })
-            product.save((err) => {
-                if (err) {
-                    res.json("save khong thanh cong");
-                } else {
+                .then(() => {
                     res.redirect("http://localhost:3000/admin/dashboard")
-                }
-            });
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
         }
 
     });
 }
 exports.deleted = (req, res) => {
-    
-        products.findByIdAndDelete(req.params.id, (err, success) => {
-            if (err) {
-                console.log("Error" + err);
-            }else{
-                res.status(200).send();
-            }    
-        });
-   
-    
-    
+
+    products.deleteMany({
+        _id: req.params.id
+    }, (err, success) => {
+        if (err) {
+            console.log("Error" + err);
+        } else {
+            res.status(200).send();
+        }
+    });
+
 }
 
