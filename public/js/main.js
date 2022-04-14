@@ -5,7 +5,7 @@ $(document).ready(function () {
     let txtsearch = $('.search-bar').val();
     $.ajax({
       type: 'GET',
-      url: 'http://localhost:3000/admin/search/' + txtsearch,
+      url: 'http://localhost:3000/Storey/search/' + txtsearch,
       success: function (response) {
         $('.products-row').remove('div')
         $("div#addRowSeach").html(response);
