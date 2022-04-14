@@ -1,5 +1,20 @@
-
 $(document).ready(function () {
+  //click find
+  $('.search-bar').blur(()=>{
+    let txtsearch = $('.search-bar').val();
+    $.ajax({
+      type: 'GET',
+      url: 'http://localhost:3000/admin/search/'+txtsearch,
+      success: function (response) {
+       alert(response)
+      },
+      error: function (err) {
+        console.log(err);
+      }
+    });
+  })
+  
+  //click delete
   $('.btn_delete').click(()=>{
     let id = $('.btn_delete').attr('data-id');
 

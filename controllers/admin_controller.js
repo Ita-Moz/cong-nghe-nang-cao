@@ -58,6 +58,27 @@ exports.add = (req, res) => {
 
     });
 }
+exports.search = (req, res) => {
+    products.find(
+        {
+            name: req.params.name
+        }
+    )
+        .then(data => {
+            if (data.length!=0) {
+                console.log(data)
+                res.send("xinchao")
+            }
+            else {
+                res.send("Khong tim thay san pham")
+            }
+        })
+        .catch(err => {
+            console.log("Error search" + err)
+        })
+
+
+}
 exports.deleted = (req, res) => {
 
     products.deleteMany({
