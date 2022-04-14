@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOREY - Home</title>
+    <script src="../public/css/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <a class="nav-link btn btn-success" href="http://localhost:8080/Storey/login" id="btnDangnhap">Đăng nhập</a>
+
+  <!--  <nav class="navbar navbar-expand-md bg-white ">
+        <a href="./trangchu.ejs " class="navbar-brand ml-lg-3 ml-md-auto pl-5"><img src="../public/images/logo1.png"
+                width="80%" height="80%" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myMenu">
+             class="navbar-toggler-icon bg-danger"></span> 
+            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="myMenu">
+            <ul class="menu navbar-nav">
+                <li class="navbar-item "><a href="#" title="Thương Hiệu" class="navbar-link active">Thương Hiệu</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12 ">
+                                <th>CÁC HÃNG BÁN CHẠY</th>
+                                <li><a href="#">> Sage <span class="bg-warning  p-1">new</span></a></li>
+                                <li><a href="#">> Fouetté</a></li>
+                                <li><a href="#">> Casio</a></li>
+                                <li><a href="#">> Citizen</a></li>
+                                <li><a href="#">> Seiko</a></li>
+                                <li><a href="#">> OP</a></li>
+                                <li><a href="#">> Daniel Wellington (DW)</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>KHUYÊN DÙNG</th>
+                                <li><a href="#">> Orient</a></li>
+                                <li><a href="#">> G-Shock & Baby-G <span
+                                            class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Fossil</a></li>
+                                <li><a href="#">> Skagen</a></li>
+                                <li><a href="#">> Michael Kors</a></li>
+                                <li><a href="#">> Candino</a></li>
+                                <li><a href="#">> Adriatica</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12 ">
+                                <th>CÁC DÒNG ĐẶC BIỆT</th>
+                                <li><a href="#">> Limited Edition <span
+                                            class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Thông Minh</a></li>
+                                <li><a href="#">> Đồng Hồ Quân Đội</a></li>
+                                <li><a href="#">> Đồng Hồ Điện tử</a></li>
+                                <li><a href="#">> Đồng Hồ Đính Kim Cương <span
+                                            class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Xà Cừ</a></li>
+                                <li><a href="#">> Đồng Hồ Trẻ Em</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li class="navbar-item pl-5"><a href="#titleDHNam" title="Đồng hồ Nam" class="navbar-link">Nam</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12">
+                                <th>KHOẢNG GIÁ</th>
+                                <li><a href="#">> Dưới 2tr</a></li>
+                                <li><a href="#">> 2tr - 3tr</a></li>
+                                <li><a href="#">> 3tr - 4tr</a></li>
+                                <li><a href="#">> 4tr - 5tr</a></li>
+                                <li><a href="#">> trên 5tr</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>CHẤT LIỆU DÂY</th>
+                                <li><a href="#">> Casio <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Citizen</a></li>
+                                <li><a href="#">> OP</a></li>
+                                <li><a href="#">> Doxa</a></li>
+                                <li><a href="#">> Tissot</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <th>THƯƠNG HIỆU HOT</th>
+                                <li><a href="#">> Đồng Hồ Siêu Mỏng<span
+                                            class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Vàng 18K </a></li>
+                                <li><a href="#">> Đồng Hồ Lộ Máy(Skeleton)</a></li>
+                                <li><a href="#">> Đồng Hồ Đính Kim Cương <span
+                                            class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Phiên Bản Giới Hạn</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="navbar-item" style="padding-left: 55px;"><a href="#titleDHNU" title="Đồng hồ Nữ"
+                        class="navbar-link">Nữ</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12">
+                                <th>KHOẢNG GIÁ</th>
+                                <li><a href="#">> Dưới 2tr</a></li>
+                                <li><a href="#">> 2tr - 3tr</a></li>
+                                <li><a href="#">> 3tr - 4tr</a></li>
+                                <li><a href="#">> 4tr - 5tr</a></li>
+                                <li><a href="#">> trên 5tr</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>THƯƠNG HIỆU HOT</th>
+                                <li><a href="#">> Casio <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Citizen</a></li>
+                                <li><a href="#">> OP</a></li>
+                                <li><a href="#">> Doxa</a></li>
+                                <li><a href="#">> Tissot</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <th>CÁC DÒNG ĐẶC BIỆT</th>
+                                <li><a href="#">> Đồng Hồ Siêu Mỏng<span
+                                            class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Vàng 18K </a></li>
+                                <li><a href="#">> Đồng Hồ Lộ Máy(Skeleton)</a></li>
+                                <li><a href="#">> Đồng Hồ Đính Kim Cương <span
+                                            class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Phiên Bản Giới Hạn</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="navbar-item" style="padding-left: 35px;"><a href="#titleDHCAPDOI" title="Đồng Hồ Đôi"
+                        class="navbar-link">Cặp đôi</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12">
+                                <th>KHOẢNG GIÁ</th>
+                                <li><a href="#">> Dưới 2tr</a></li>
+                                <li><a href="#">> 2tr - 3tr</a></li>
+                                <li><a href="#">> 3tr - 4tr</a></li>
+                                <li><a href="#">> 4tr - 5tr</a></li>
+                                <li><a href="#">> trên 5tr</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>THƯƠNG HIỆU HOT</th>
+                                <li><a href="#">> Casio <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Citizen</a></li>
+                                <li><a href="#">> OP</a></li>
+                                <li><a href="#">> Doxa</a></li>
+                                <li><a href="#">> Tissot</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <th>CÁC DÒNG ĐẶC BIỆT</th>
+                                <li><a href="#">> Đồng Hồ Siêu Mỏng<span
+                                            class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Vàng 18K </a></li>
+                                <li><a href="#">> Đồng Hồ Lộ Máy(Skeleton)</a></li>
+                                <li><a href="#">> Đồng Hồ Đính Kim Cương <span
+                                            class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Phiên Bản Giới Hạn</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li class="navbar-item" style="padding-left: 30px;"><a href="#" title="Phụ kiện - Dịch vụ "
+                        class="navbar-link">Phụ kiện</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12">
+                                <th>KHOẢNG GIÁ</th>
+                                <li><a href="#">> Dưới 2tr</a></li>
+                                <li><a href="#">> 2tr - 3tr</a></li>
+                                <li><a href="#">> 3tr - 4tr</a></li>
+                                <li><a href="#">> 4tr - 5tr</a></li>
+                                <li><a href="#">> trên 5tr</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>THƯƠNG HIỆU HOT</th>
+                                <li><a href="#">> Casio <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Citizen</a></li>
+                                <li><a href="#">> OP</a></li>
+                                <li><a href="#">> Doxa</a></li>
+                                <li><a href="#">> Tissot</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <th>CÁC DÒNG ĐẶC BIỆT</th>
+                                <li><a href="#">> Đồng Hồ Siêu Mỏng<span
+                                            class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Vàng 18K </a></li>
+                                <li><a href="#">> Đồng Hồ Lộ Máy(Skeleton)</a></li>
+                                <li><a href="#">> Đồng Hồ Đính Kim Cương <span
+                                            class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Phiên Bản Giới Hạn</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="navbar-item dropdown" style="padding-left: 30px;"><a href="#" title="Liên Hệ - Hỏi Đáp"
+                        class="navbar-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="false"
+                        aria-expanded="true">Dịch Vụ</a>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Sửa chữa đồng hồ</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Bảo dưỡng đồng hồ</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">In logo lên đồng hồ</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Khắc laser lên đồng hồ</a>
+                    </div>
+                </li>
+                <li class="navbar-item dropdown" style="padding-left: 30px;"><a href="#" title="Liên Hệ - Hỏi Đáp"
+                        class="navbar-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">Liên hệ</a>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="./GioiThieu.html">Thông tin về STOREY</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">AD : Văn Hoàng</a>
+                        <a class="dropdown-item" href="./LienHe.html">AD : Quang Huy</a>
+                        <a class="dropdown-item" href="#">AD : Gia Phúc</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav> -->
+    
+   <!-- Carousel -->
+   <div class="container mt-0">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../public/images/bannerMain.jpg" width="50%" height="50%" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../public/images/bander4.png" class="d-block img-fluid w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../public/" class="d-block img-fluid w-100" alt="...">
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  
+
+
+
+
+    <!-- Section -->
+
+    <div class="container" id="Products">
+        <h3 id="titleDHNam" class="text-center font-weight-bold p-2 mt">ĐỒNG HỒ NAM BÁN CHẠY</h3>
+        <div id="products" class="row list-group-horizontal">
+            <div class="item col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image" class="grid"
+                        src="../public/images/36trieu.jpg" alt="Sản phẩm 1" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Doxa D173TCM – Nam – Kính Sapphire – Automatic (Tự Động) –
+                                Dây Kim Loại</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <h6 class="lead">36.940.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/22_SUND6002W0-399x399.jpg" alt="Sản phẩm 2" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Orient SUND6002W0 – Nam – Quartz (Pin) – Dây Kim Loại Được
+                                xếp hạng
+                                Được xếp hạng </a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <h6 class="lead">2.810.000 ₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/86_BI5006-81P-399x399.jpg" alt="Sản phẩm 3" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Citizen BI5006-81P – Nam – Quartz (Pin) BJHG06-81P – Dây
+                                Kim Loại Được xếp hạng</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">2.900.000 ₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/120_131.60.022.02-399x399.jpg" alt="Sản phẩm 4" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Doxa 131.60.022.02 – Nam – Kính Sapphire – Quartz (Pin) –
+                                Dây Da Được xếp hạng</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">19.480.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/126_L4.759.4.12.2-399x399.jpg" alt="Sản phẩm 5" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Longines L4.759.4.12.2 – Nam – Kính Sapphire – Quartz (Pin)
+                                – Dây Da</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">20.900.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/AE-1200WHD-1AVDF-399x399.jpg" alt="Sản phẩm 6" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Casio AE-1200WHD-1AVDF – Nam – Kính Nhựa – Quartz (Pin) –
+                                Dây Kim Loại</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">1.308.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/NH8350-59A-399x399.jpg" alt="Sản phẩm 7" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Citizen NH8350-59A – Nam – Automatic (Tự Động) – Dây Kim
+                                Loại</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">5.250.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/T006.407.36.263.00-399x399.jpg" alt="Sản phẩm 8" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Tissot T006.407.36.263.00 – Nam – Kính Sapphire – Automatic
+                                (Tự Động) – Dây Da</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">18.830.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dong HO NU
+        <h3 id="titleDHNU" class="text-center font-weight-bold p-2 mt-5">ĐỒNG HỒ NỮ BÁN CHẠY</h3>
+        <div id="products" class="row list-group-horizontal">
+            <div class="item col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image" class="grid"
+                        src="../public/images/11_B640WC-5ADF-399x399.jpg" alt="Sản phẩm 1" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Doxa D173TCM – Nam – Kính Sapphire – Automatic (Tự Động) –
+                                Dây Kim Loại</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <h6 class="lead">1.826.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/DW00100163-399x399.jpg" alt="Sản phẩm 2" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Orient SUND6002W0 – Nam – Quartz (Pin) – Dây Kim Loại Được
+                                xếp hạng
+                                Được xếp hạng</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <h6 class="lead">4.100.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/117_DW00100220-2-399x399.jpg" alt="Sản phẩm 3" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Citizen BI5006-81P – Nam – Quartz (Pin) BJHG06-81P – Dây
+                                Kim Loại Được xếp hạng</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">2.900.000 ₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/89_D158RWH-399x399.jpg" alt="Sản phẩm 4" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Doxa 131.60.022.02 – Nam – Kính Sapphire – Quartz (Pin) –
+                                Dây Da Được xếp hạng</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">3.700.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/73_D174SCM-399x399.jpg" alt="Sản phẩm 5" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Longines L4.759.4.12.2 – Nam – Kính Sapphire – Quartz (Pin)
+                                – Dây Da</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">15.800.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/283_ES4369-399x399.jpg" alt="Sản phẩm 6" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Casio AE-1200WHD-1AVDF – Nam – Kính Nhựa – Quartz (Pin) –
+                                Dây Kim Loại</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">16.830.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/24_53229-SVMWSV-6-399x399.jpg" alt="Sản phẩm 7" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Citizen NH8350-59A – Nam – Automatic (Tự Động) – Dây Kim
+                                Loại</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">3.210.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/2_53555-RGMWRG-2-399x399.jpg" alt="Sản phẩm 8" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Tissot T006.407.36.263.00 – Nam – Kính Sapphire – Automatic
+                                (Tự Động) – Dây Da</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">6.384.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- CẶP ĐÔI -->
+        <h3 id="titleDHCAPDOI" class="text-center font-weight-bold p-2 mt-5">ĐỒNG HỒ CẶP ĐÔI</h3>
+        <div id="products" class="row list-group-horizontal">
+            <div class="item col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image" class="grid"
+                        src="../public/images/2_K7B216C6-K7B236C6-399x399.jpg" alt="Sản phẩm 1" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Calvin Klein Đôi – Quartz (Pin) – Dây Da (K7B216C6 –
+                                K7B236C6) – Mặt Số 42mm – 36mm</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <h6 class="lead">13.540.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/15_MTP-1303D-7BVDF-–-LTP-1303D-7BVDF-399x399.jpg" alt="Sản phẩm 2"
+                        width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Casio Đôi – Quartz (Pin) – Dây Kim Loại (MTP-1303D-7BVDF –
+                                LTP-1303D-7BVDF)</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <h6 class="lead">2.256.000₫</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/22_T085.407.16.013.00-–-T085.207.16.013.00-399x399.jpg" alt="Sản phẩm 3"
+                        width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Tissot Đôi – Kính Sapphire – Automatic (Tự Động) – Dây Da
+                                (T085.207.16.013.00)</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">32.900.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/40_MTP-1183G-7ADF-LTP-1183G-7ADF-399x399.jpg" alt="Sản phẩm 4"
+                        width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Casio Đôi – Quartz (Pin) – Dây Kim Loại (MTP-1183G-7ADF –
+                                LTP-1183G-7ADF) – Mặt Số 38mm –28mm</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">2.821.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/8_T035.410.11.051.00-–-T035.210.11.051-399x399.jpg" alt="Sản phẩm 5"
+                        width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Tissot Đôi – Kính Sapphire – Quartz (Pin) – Dây Kim Loại
+                                (T035.410.11.051.00 – T035.210.11.051.00)</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">21.240.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/9_MTP-V300G-7AUDF-LTP-V300G-7AUDF-399x399.jpg" alt="Sản phẩm 6"
+                        width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Casio Đôi – Quartz (Pin) – Dây Kim Loại (MTP-V300G-7AUDF –
+                                LTP-V300G-7AUDF) – Mặt Số 38mm – 33mm</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">3.948.000 ₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/19_BM9012-02A-EW3252-07A-399x399.jpg" alt="Sản phẩm 7" width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Citizen Đôi – Kính Sapphire – Eco-Drive (Năng Lượng Ánh
+                                Sáng) – Dây Da (BM9012-02A – EW3252-07A) – Mặt Số 37mm – 27mm</a></h6>
+                        <img class="rating" src="../public/images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">13.200.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item  col-xs-3 col-lg-3">
+                <div class="thumbnail"> <img class="group list-group-image"
+                        src="../public/images/23_T097.410.16.038.00-–-T097.010.16.038.00-399x399.jpg" alt="Sản phẩm 8"
+                        width="300">
+                    <div class="caption">
+                        <h6 class="group inner list-group-item-heading mt-2" style="text-align: center;"><a
+                                href="./ChiTietSanPham.html">Tissot Đôi – Kính Sapphire – Quartz (Pin) – Dây Da
+                                (T097.410.16.038.00 – T097.010.16.038.00)</a></h6>
+                        <img class="rating" src="../images/rating.png" alt="">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <p class="lead">19.580.000₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CẶP ĐÔI -->
+        <!-- THƯƠNG HIỆU -->
+        <h3 id="thuonghieu" class="titleThuongHieu mt-5 mb-5" style="color: red;">THƯƠNG HIỆU NỔI TIẾNG</h3>
+        <div class="container flex-column pb-5">
+            <img width="100%" src="../public/images/TH2.png" alt="">
+        </div>
+
+        <h3 id="thuonghieu" class="titleThuongHieu" style="color: red;">THƯƠNG HIỆU THỤY SỸ</h3>
+        <div class="container flex-column pb-5">
+            <img style="margin-bottom: 100px;" width="100%" src="../public/images/thuonghieu2.png" alt="">
+        </div>
+        <!-- THƯƠNG HIỆU -->
+    </div>
+
+    <!-- footer -->
+    <footer style="background-color: #9ef1f1;">
+        <div class="head"></div>
+
+
+        <div class="center " style="width: 90%;">
+
+            <div class="mid row  pt-4 ">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-4 col-md-10 col-sm-10">
+                    <div style="clear: both;"></div>
+                    <div class="lien_he" title="Hotline: 1900.6666">
+                        <a href="tel:19006666" data-wpel-link="internal">1900.6666</a>
+                    </div>
+                    <div class="cont mt-3 mt-md-4">
+                        <b>CÔNG TY CỔ PHẦN TRỰC TUYẾN <a href="./TrangChu.html"
+                                class="h4 font-weight-bold">STOREY.</a></b>
+                    </div>
+                    <ul style="display: block;">
+                        <li>
+                            <span class="icon"><i class="fas fa-map-marked-alt fa-2x"></i></i></span>
+                            <span class="text">Địa chỉ: Số 12 Nguyễn Văn Bảo, Phường 14, Quận Gò Vấp, Thành phố Hồ Chí
+                                Minh</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fas fa-phone fa-2x"></i></span> Hotline:
+                            <a href="tel:18006005" title="Hotline" class="text hover"> 0123456789</a>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fas fa-envelope fa-2x"></i></span> Email: <a href="#"
+                                title="email" class="text hover"> ABC@gmail.com</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-10">
+                    <h5 class="text-uppercase">Hỗ trợ</h5>
+                    <hr class="light-mid">
+                    <ul class="menuFoot">
+                        <li><a href="/chinh-sach-chung/2/1.-Chinh-sach-bao-hanh.html" title="1. Chính sách bảo hành">1.
+                                Chính sách bảo hành</a></li>
+                        <li><a href="/chinh-sach-chung/4/2.-Chinh-sach-doi-hang.html" title="2. Chính sách đổi hàng">2.
+                                Chính sách đổi hàng</a></li>
+                        <li><a href="/chinh-sach-chung/5/3.-Chinh-sach-bao-mat.html" title="3. Chính sách bảo mật">3.
+                                Chính sách bảo mật</a></li>
+                        <li><a href="/chinh-sach-chung/6/4.-Chinh-sach-van-chuyen.html"
+                                title="4. Chính sách vận chuyển">4. Chính sách vận chuyển</a></li>
+                        <li><a href="/chinh-sach-chung/7/5.-Huong-dan-thanh-toan.html"
+                                title="5. Hướng dẫn thanh toán">5. Hướng dẫn thanh toán</a></li>
+                        <li><a href="/chinh-sach-chung/8/6.-Huong-dan-mua-hang.html" title="6. Hướng dẫn mua hàng">6.
+                                Hướng dẫn mua hàng</a></li>
+
+                    </ul>
+
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-10">
+                    <h5 class="text-uppercase">Sản Phẩm</h5>
+                    <hr class="light-mid">
+                    <ul class="menuFoot ">
+                        <li><a href="/sp/dong-ho-chinh-hang.html" title="Dong ho">Đồng hồ chính hãng</a></li>
+                        <li><a href="/kinh-mat-thoi-trang.html" title="Kính mát">Kính mắt thời trang</a></li>
+                        <li><a href="/phu-kien-dong-ho.html" title="Day dong ho">Dây đồng hồ</a></li>
+                        <li><a href="/sp/hop-dung-dong-ho.html" title="Hop dong ho">Hộp đựng đồng hồ</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-10">
+                    <h5 class="text-uppercase">Danh mục</h5>
+                    <hr class="light-mid ">
+                    <div style="clear: both;"></div>
+
+                    <ul class="tag">
+                        <li> <a href="#" class="mb-5" title="Cửa hàng">Hệ thống cửa hàng</a></li>
+                        <li> <a href="#" title="">Góc hỏi đáp</a> </li>
+                        <li><a href="#" title="Tin tức">Tin tức - Sự kiện</a></li>
+                        <li> <a href="#" title="About us">Giới thiệu</a></li>
+                    </ul>
+                </div>
+                <div class="col-1"></div>
+
+
+            </div>
+            <div class="bot col-md-10 text-left pb-2">
+                <hr class="light-100 ">
+                <div class="row">
+                    <div class="col-9">
+                        <p class="fRobotoB pb5 font-weight-bold  ">
+                            <a href="#">
+                                <h4 class="font-weight-bold">STOREY</h4>
+                            </a>
+                        </p>
+                        <h6 class="lh21 ">
+                            Nhà phân phối độc quyền các thương hiệu đồng hồ, nổi tiếng thế giới: Epos Swiss, Atlantic
+                            Swiss, Diamond D, Philippe Auguste, Jacques Lemans, Citizen, Aries Gold, dây da đồng hồ, dây
+                            đồng hồ đeo tay....
+                        </h6>
+                    </div>
+                    <div class="col-3">
+                        <h4 class="pt-3">SOCIAL PAGE:</h4>
+                        <a href="https://www.facebook.com" class="facebook mr-2"><i
+                                class="fab fa-facebook-square fa-2x "></i></a>
+                        <a href="https://www.youtube.com" class="youtube mr-2"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a href="https://twitter.com" class="twitter mr-2"><i
+                                class="fab fa-twitter-square fa-2x"></i></a>
+                        <a href="https://www.instagram.com" class="instagram mr-2"><i
+                                class="fab fa-instagram-square fa-2x"></i></a>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="row pt-3 bg-dark">
+
+            <div class="col"></div>
+            <div class="logo_footer col-md-4 col-sm-12 container-1">
+
+                <h6 style="color: white;">Copyright © 2008-2020 STOREY.</h6>
+            </div>
+            <div class="logo_footer col-md-6 col-sm-12 container-1">
+
+                <p id="footend" style="color: white;">Bản quyền thuộc về <a href="./TrangChu.html">STOREY</a> Cung cấp
+                    bởi <a href="#">VanHoang</a> - <a href="#">QuangHuy</a> - <a href="#">GiaPhuc</a></p>
+            </div>
+
+            <div class="col"></div>
+        </div>
+
+    </footer>
+
+    <!-- Regex Expresstion -->
+    <div class="container">
+
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal_DN">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header w-75">
+                        <p class="modal-title text-uppercase  h4">Đăng Nhập</p>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <input type="text" name="txtUser_DN" id="txtUser_DN" placeholder="Nhập tên đăng ký"
+                            maxlength="30" required title="Hãy cho chúng tôi biết tên đăng ký của bạn."> <span>*</span>
+                        <br>
+                        <input type="text" name="txtPass_DN" id="txtPass_DN" placeholder="Nhập mật khẩu" required
+                            title="Hãy cho chúng tôi biết mật khẩu của bạn."> <span>*</span>
+                        <br>
+                        <input type="checkbox" name="chbDN" id="chbDN" width="10%" checked> Nhớ đăng nhập lần sau
+                        <br>
+                        <span class="text-warning" id="btnTB"></span>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer w-75">
+                        <!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> -->
+                     
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+</body>
+
+</html>

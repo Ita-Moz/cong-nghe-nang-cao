@@ -1,7 +1,8 @@
 <head>
-	<%- include('_head') %>
+	<%- include('../views/_head') %>
 </head>
-<script src="../controllers/admin_controller.js"></script>
+
+<script src="../controllers/account_controller.js"></script>
 
 <body>
 	<div class="app-container">
@@ -26,8 +27,9 @@
 						<span>Home</span>
 					</a>
 				</li>
-				<li class="sidebar-list-item active">
-					<a href="#">
+			
+				<li class="sidebar-list-item ">
+					<a href="http://localhost:3000/Storey/dashboard">
 						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
 							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 							class="feather feather-shopping-bag">
@@ -39,7 +41,7 @@
 					</a>
 				</li>
 
-				<li class="sidebar-list-item ">
+				<li class="sidebar-list-item active">
 					<a href="http://localhost:3000/Storey/dashboard/quan-ly-user">
 						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
 							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -223,7 +225,7 @@
 				<!-- add row search -->
 				<div style="color:white;" id="addRowSeach"></div>
 				<!--  -->
-				<% danhsach.forEach((element,index)=> { %>
+				<% accountUser.forEach((element,index)=> { %>
 					<div class="products-row delete-row<%- element._id %>" data-row="<%- element._id  %>">
 						<button class="cell-more-button">
 							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
@@ -234,24 +236,19 @@
 								<circle cx="12" cy="19" r="1" />
 							</svg>
 						</button>
-						<div class="product-cell image">
-							<img src="../public/image/<%- element.image  %> " alt="product">
-							<span>
-								<%- element.name %>
-							</span>
-						</div>
-						<div class="product-cell category"><span class="cell-label">Category:</span>
-							<%- element.describe %>
+						
+						<div class="product-cell category"><span class="cell-label">Tên tài khoản:</span>
+							<%- element.tentaikhoan %>
 						</div>
 						<div class="product-cell status-cell">
 							<span class="cell-label">Status:</span>
 							<span class="status active">Active</span>
 						</div>
-						<div class="product-cell stock"><span class="cell-label">Stock:</span>
-							<%- element.soluong %>
+						<div class="product-cell stock"><span class="cell-label">Tên người dùng:</span>
+							<%- element.tennguoidung%>
 						</div>
-						<div class="product-cell price"><span class="cell-label">Price:</span>
-							<%- element.price %>
+						<div class="product-cell price"><span class="cell-label">Email:</span>
+							<%- element.email %>
 						</div>
 						<div class="product-cell sales d-flex justify-content-around"><span
 								class="cell-label ">Sales:</span>

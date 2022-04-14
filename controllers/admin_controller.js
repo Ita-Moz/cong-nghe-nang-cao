@@ -11,12 +11,16 @@ var storage = multer.diskStorage({
 });
 var upload = multer({
     storage: storage,
+    limits: {
+        fieldNameSize: 300,
+        fileSize: 1*1024*1024, // 10 Mb
+      },
     fileFilter: function (req, file, cb) {
         console.log(file);
-        if (file.mimetype == "image/jpge" || file.mimetype == "image/png" || file.mimetype == "image/gif") {
+        if (file.mimetype === "image/jpge" || file.mimetype === "image/jpg" || file.mimetype === "image/png" || file.mimetype === "image/gif" && (file.size <= (1024*1024*1))) {
             cb(null, true)
         } else {
-            return cb(new Error('Dung luong anh qua lon'))
+            return cb(new Error('Dung luong anh qua lon'),false)
         }
     }
 }).single("txtFile");
@@ -49,7 +53,7 @@ exports.add = (req, res) => {
                 describe: req.body.txtDescribe,
             })
                 .then(() => {
-                    res.redirect("http://localhost:3000/admin/dashboard")
+                    res.redirect("http://localhost:3000/Storey/dashboard")
                 })
                 .catch((err) => {
                     console.log(err)

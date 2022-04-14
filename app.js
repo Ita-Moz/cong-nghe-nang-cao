@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const port = 3000;
 
-mongoose.connect("mongodb+srv://manh123:a123@cluster0.c2cz4.mongodb.net/productADMIN?retryWrites=true&w=majority" , { useNewUrlParser : true, useUnifiedTopology : true},(err)=>{
+mongoose.connect("mongodb+srv://ldplayer:ldplayer@cluster0.c2cz4.mongodb.net/productADMIN?retryWrites=true&w=majority" , { useNewUrlParser : true, useUnifiedTopology : true},(err)=>{
     if(err){
         console.error("Error ket noi")
     }else{
-        console.log("Connect thanh cong MONGODB!!!")
+        console.log("Connect success with MongoDB!!!")
     }
 })
 
@@ -23,8 +24,9 @@ app.set('view engine', 'ejs');
 app.set('views', "./views");
 
 //router
-app.use('/admin',require('./routes/index'));
+app.use('/Storey',require('./routes/index'));
 
-app.listen(3000,()=>{
-    console.log('Server running!!!')
-})
+app.listen(port, function(err){
+    if (err) console.log(err);
+    console.log(`Server listening on PORT http://localhost:${port}`);
+  }); 

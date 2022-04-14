@@ -23,7 +23,7 @@ $(document).ready(function () {
     if (confirm("Bạn có chắc chắn muốn xoá sản phẩm này - " + id) == true) {
       $.ajax({
         type: 'DELETE',
-        url: 'http://localhost:3000/admin/deleted/' + id,
+        url: 'http://localhost:3000/Storey/deleted/' + id,
         success: function (response) {
           alert(id)
           $('.delete-row' + id).remove('div')
