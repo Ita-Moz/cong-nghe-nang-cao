@@ -61,16 +61,23 @@ exports.add = (req, res) => {
 exports.search = (req, res) => {
     products.find(
         {
-            name: req.params.name
+            name:req.params.name
         }
     )
         .then(data => {
             if (data.length!=0) {
                 console.log(data)
-                res.send("xinchao")
+                let rowSearch="";
+                data.forEach((item,index) => {
+                    rowSearch += 
+                    `
+                    <div class="products-row "><div class="product-cell image"><img src="../public/image/${item.image} " alt="product"><span>${item.name} </span> </div> <div class="product-cell category"><span class="cell-label">Category:</span> ${item.describe} </div> <div class="product-cell status-cell"> <span class="cell-label">Status:</span> <span class="status active">Active</span> </div> <div class="product-cell stock"><span class="cell-label">Stock:</span> ${item.soluong} </div><div class="product-cell price"><span class="cell-label">Price:</span> ${item.price} </div><div class="product-cell sales d-flex justify-content-around"><span class="cell-label ">Sales:</span><button id="btn_edit" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button><button data-id="${item._id}" class="btn btn-danger btn_delete"><i class="fa-solid fa-trash"></i></button></div></div>
+                    ` 
+                });
+                res.send(rowSearch)
             }
             else {
-                res.send("Khong tim thay san pham")
+                res.send("----------Không tìm thấy kết quả nào-------")
             }
         })
         .catch(err => {
