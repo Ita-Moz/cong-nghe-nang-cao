@@ -17,15 +17,14 @@ $(document).ready(function () {
   })
 
   //click delete
-  $('.btn_delete').click(() => {
-    let id = $('.btn_delete').attr('data-id');
+  $('button.btn_delete').click(function(){
+    const id = $(this).attr('data-id');
 
     if (confirm("Bạn có chắc chắn muốn xoá sản phẩm này - " + id) == true) {
       $.ajax({
         type: 'DELETE',
         url: 'http://localhost:3000/Storey/deleted/' + id,
         success: function (response) {
-          alert(id)
           $('.delete-row' + id).remove('div')
         },
         error: function (err) {
@@ -36,9 +35,5 @@ $(document).ready(function () {
       console.log("404")
     }
   })
-
-
-
-
 
 });
