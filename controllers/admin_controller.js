@@ -13,14 +13,14 @@ var upload = multer({
     storage: storage,
     limits: {
         fieldNameSize: 300,
-        fileSize: 1*1024*1024, // 10 Mb
-      },
+        fileSize: 1 * 1024 * 1024, // 10 Mb
+    },
     fileFilter: function (req, file, cb) {
         console.log(file);
-        if (file.mimetype === "image/jpge" || file.mimetype === "image/jpg" || file.mimetype === "image/png" || file.mimetype === "image/gif" && (file.size <= (1024*1024*1))) {
+        if (file.mimetype === "image/jpge" || file.mimetype === "image/jpg" || file.mimetype === "image/png" || file.mimetype === "image/gif" && (file.size <= (1024 * 1024 * 1))) {
             cb(null, true)
         } else {
-            return cb(new Error('Dung luong anh qua lon'),false)
+            return cb(new Error('Dung luong anh qua lon'), false)
         }
     }
 }).single("txtFile");
@@ -65,22 +65,21 @@ exports.add = (req, res) => {
 exports.search = (req, res) => {
     products.find(
         {
-            name:req.params.name
+            name: req.params.name
         }
     )
         .then(data => {
-            if (data.length!=0) {
+            if (data.length != 0) {
                 console.log(data)
-                let rowSearch="";
-                data.forEach((item,index) => {
-                    rowSearch += 
-                    `
+                let rowSearch = "";
+                data.forEach((item, index) => {
+                    rowSearch +=
+                        `
                     <div class="products-row "><div class="product-cell image"><img src="../public/image/${item.image} " alt="product"><span>${item.name} </span> </div> <div class="product-cell category"><span class="cell-label">Category:</span> ${item.describe} </div> <div class="product-cell status-cell"> <span class="cell-label">Status:</span> <span class="status active">Active</span> </div> <div class="product-cell stock"><span class="cell-label">Stock:</span> ${item.soluong} </div><div class="product-cell price"><span class="cell-label">Price:</span> ${item.price} </div><div class="product-cell sales d-flex justify-content-around"><span class="cell-label ">Sales:</span><button class="btn btn-primary btn_edit"><i class="fa-solid fa-pen-to-square"></i></button><button data-id="${item._id}" class="btn btn-danger btn_delete"><i class="fa-solid fa-trash"></i></button></div></div>
-                    ` 
+                    `
                 });
                 res.send(rowSearch)
-            }
-            else {
+            } else {
                 res.send("----------Không tìm thấy kết quả nào-------")
             }
         })

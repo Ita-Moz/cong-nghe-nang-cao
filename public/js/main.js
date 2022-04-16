@@ -7,7 +7,7 @@ $(document).ready(function () {
       type: 'GET',
       url: 'http://localhost:3000/Storey/search/' + txtsearch,
       success: function (response) {
-        $('.products-row').remove('div')
+        $('.products-row').hide('div')
         $("div#addRowSeach").html(response);
       },
       error: function (err) {
