@@ -26,6 +26,7 @@ $(document).ready(function () {
         url: 'http://localhost:3000/Storey/deleted/' + id,
         success: function (response) {
           $('.delete-row' + id).remove('div')
+          alert("Xoá thành công ")
         },
         error: function (err) {
           console.log(err);

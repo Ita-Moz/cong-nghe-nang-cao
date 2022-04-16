@@ -2,6 +2,7 @@
 	<%- include('../views/_head') %>
 </head>
 <script src="/controllers/account_controller.js"></script>
+<script src="/controllers/admin_controller.js"></script>
 
 <body>
 	<div class="app-container">
@@ -251,7 +252,7 @@
 						</div>
 						<div class="product-cell sales d-flex justify-content-around"><span
 								class="cell-label ">Sales:</span>
-							<button id="btn_edit" class="btn btn-primary">
+							<button class="btn btn-primary v">
 								<i class="fa-solid fa-pen-to-square"></i></button>
 							<button data-id="<%- element._id  %>" class="btn btn-danger btn_delete">
 								<i class="fa-solid fa-trash"></i></button>

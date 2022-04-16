@@ -9,13 +9,11 @@ router.delete('/deleted/:id',controller.deleted);
 router.get('/search/:name',controller.search);
 //------------------------------
 
-router.get('/login', accountController.login);
-
-
-
 
 //Quản lí tài khoản User, Admin
+router.get('/login', accountController.login);
 router.post('/login', accountController.addUser);
+router.delete('/delete-user', accountController.delUser);
 
 
 router.get('/dashboard/quan-ly-user', accountController.viewAccUser);
