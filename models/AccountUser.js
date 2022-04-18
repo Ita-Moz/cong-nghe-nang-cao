@@ -18,4 +18,4 @@ const AccountUser = mongoose.Schema({
         require: true
     },
 })
-module.exports =  mongoose.model( 'AccountUser' , AccountUser)
+module.exports =  mongoose.model( 'account_user' , AccountUser)

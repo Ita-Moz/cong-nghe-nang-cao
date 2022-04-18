@@ -1,5 +1,13 @@
 $(document).ready(function () {
+  // mở modal 
+  $('button.btn_edit').click(function(){    
+    $('#myModalEdit').modal('show');
 
+  })
+  $("#btnSave").click(function () {
+    alert("Bạn đã cập nhật thành công");
+    $("div#myModalEdit").modal("hide");
+  });
   //click find
   $('.search-bar').blur(() => {
     let txtsearch = $('.search-bar').val();
@@ -35,6 +43,9 @@ $(document).ready(function () {
     } else {
       console.log("404")
     }
-  })
+  }) 
+
+
+
 
 });

@@ -3,8 +3,7 @@ $(document).ready(function () {
       
           console.log('SignUp Success!!!')
           alert('Đăng kí thành công <3');
-    
-     
+          
     });
   
     const signUpButton = document.getElementById("signUp");
