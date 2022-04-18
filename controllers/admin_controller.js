@@ -1,3 +1,4 @@
+let fs = require('fs')
 let products = require('../models/adminData')
 //multer
 var multer = require('multer');
@@ -13,15 +14,11 @@ var upload = multer({
     storage: storage,
     limits: {
         fieldNameSize: 300,
-        fileSize: 1 * 1024 * 1024, // 10 Mb
+        fileSize: 10 * 1024 * 1024, // 10 Mb
     },
     fileFilter: function (req, file, cb) {
         console.log(file);
-        if (file.mimetype === "image/jpge" || file.mimetype === "image/jpg" || file.mimetype === "image/png" || file.mimetype === "image/gif" && (file.size <= (1024 * 1024 * 1))) {
-            cb(null, true)
-        } else {
-            return cb(new Error('Dung luong anh qua lon'), false)
-        }
+        cb(null, true)
     }
 }).single("txtFile");
 
@@ -89,6 +86,7 @@ exports.search = (req, res) => {
 
 
 }
+
 exports.deleted = (req, res) => {
 
     products.deleteMany({
@@ -97,6 +95,20 @@ exports.deleted = (req, res) => {
         if (err) {
             console.log("Error" + err);
         } else {
+            // GỠ FILE TRÊN SERVER
+            let path = `./public/image/${req.params.image}`
+            fs.unlink(path, function (err) {
+
+                if (err && err.code == 'ENOENT') {
+                    // Lỗi tìm không thấy tệp, tệp không tồn tại.
+                    console.info("File doesn't exist, won't remove it.");
+                } else if (err) {
+                    // Đã xảy ra lỗi khi xóa tệp
+                    console.error("Error occurred while trying to remove file");
+                } else {
+                    console.info(`Đã xoá 1 ảnh trong server`);
+                }
+            });
             res.status(200).send();
         }
     });

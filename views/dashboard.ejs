@@ -223,81 +223,7 @@
 				<!-- add row search -->
 				<div style="color:white;" id="addRowSeach"></div>
 				<!-- modal	 -->
-				<!-- Modal Update -->
-				<div class="modal fade" id="myModalEdit" tabindex="1" role="dialog" aria-labelledby="modelTitleId"
-					aria-hidden="true">
-					<div class="modal-dialog" role="document">
-						<div class="modal-content">
-							<div class="modal-header">
 
-								<h3 class="modal-title " style="font-weight: bolder;color: green;">Cập nhật thông
-									tin sản phẩm
-								</h3>
-								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body">
-								<div>
-									<form>
-										<div class="form-floating">
-											<label for="tensanpham">
-												<span style="font-weight: bolder;font-size: large;"> Tên sản phẩm
-												</span>
-											</label>
-											<input type="tel" class="form-control" id="tensanpham"
-												placeholder="Tên sản phẩm">
-
-										</div>
-
-										<div class="form-floating mb-3">
-											<label for="hinhanhsanpham">
-												<span style="font-weight: bolder;font-size: large;">Hình ảnh sản
-													phẩm
-												</span>
-											</label>
-											<input type="file" class="form-control" id="hinhanhsanpham">
-										</div>
-
-										<div class="form-floating mb-3">
-											<label for="mota">
-												<span style="font-weight: bolder;font-size: large;">Mô tả</span>
-											</label>
-											<input type="text" class="form-control" id="mota" placeholder="Mô tả">
-										</div>
-
-										<div class="form-floating mb-3">
-											<label for="soluong">
-												<span style="font-weight: bolder;font-size: large;">Số lượng</span>
-											</label>
-											<input type="number" class="form-control" id="soluong"
-												placeholder="Số lượng">
-										</div>
-
-										<div class="form-floating mb-3">
-											<label for="gia">
-												<span style="font-weight: bolder;font-size: large;">Giá</span>
-											</label>
-											<input type="number" class="form-control" id="gia" placeholder="Giá">
-
-										</div>
-
-
-										<button type="button" class="w-100 btn btn-lg btn-success" id="btnSave">Cập
-											nhật</button>
-
-									</form>
-								</div>
-							</div>
-
-							<div class="footer">
-								<p class="mt-1 mb-3 text-muted ml-2 text-center">Copyright &copy; 2021 - Design by
-									SinhVienIUH
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
 				<!--  -->
 				<% danhsach.forEach((element,index)=> { %>
 					<div class="products-row delete-row<%- element._id %>">
@@ -334,8 +260,86 @@
 							<button data-id="<%- element._id  %>" class="btn btn-primary btn_edit" data-toggle="modal"
 								data-target="#myModal">
 								<i class="fa-solid fa-pen-to-square"></i></button>
-							<button data-id="<%- element._id  %>" class="btn btn-danger btn_delete">
+							<button data-id="<%- element._id  %>" data-image="<%- element.image  %>" class="btn btn-danger btn_delete">
 								<i class="fa-solid fa-trash"></i></button>
+						</div>
+					</div>
+
+					<!-- Modal Update -->
+					<div class="modal fade" id="myModalEdit" tabindex="1" role="dialog" aria-labelledby="modelTitleId"
+						aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+
+									<h3 class="modal-title " style="font-weight: bolder;color: green;">Cập nhật thông
+										tin sản phẩm
+									</h3>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<div>
+										<form>
+											<div class="form-floating">
+												<label for="tensanpham">
+													<span style="font-weight: bolder;font-size: large;"> Tên sản phẩm
+													</span>
+												</label>
+												<input type="tel" class="form-control" id="tensanpham"
+													placeholder="Tên sản phẩm" value="<%- element.name %> ">
+
+											</div>
+
+											<div class="form-floating mb-3">
+												<label for="hinhanhsanpham">
+													<span style="font-weight: bolder;font-size: large;">Hình ảnh sản
+														phẩm
+													</span>
+												</label>
+												<input type="file" class="form-control" id="hinhanhsanpham"
+													value="<%- element.image %>" required>
+											</div>
+
+											<div class="form-floating mb-3">
+												<label for="mota">
+													<span style="font-weight: bolder;font-size: large;">Mô tả</span>
+												</label>
+												<input type="text" class="form-control" id="mota" placeholder="Mô tả"
+													value="<%- element.describe %>">
+											</div>
+
+											<div class="form-floating mb-3">
+												<label for="soluong">
+													<span style="font-weight: bolder;font-size: large;">Số lượng</span>
+												</label>
+												<input type="number" class="form-control" id="soluong"
+													value="<%- element.soluong%>" placeholder="Số lượng">
+											</div>
+
+											<div class="form-floating mb-3">
+												<label for="gia">
+													<span style="font-weight: bolder;font-size: large;">Giá</span>
+												</label>
+												<input type="number" class="form-control" id="gia" placeholder="Giá"
+													value="<%- element.price %>">
+
+											</div>
+
+											<button type="button" class="w-100 btn btn-lg btn-success" id="btnSave">Cập
+												nhật</button>
+
+										</form>
+									</div>
+								</div>
+
+								<div class="footer">
+									<p class="mt-1 mb-3 text-muted ml-2 text-center">Copyright &copy; 2021 - Design by
+										SinhVienIUH
+									</p>
+								</div>
+							</div>
 						</div>
 					</div>
 					<% }) %>

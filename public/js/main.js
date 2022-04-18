@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // mở modal 
-  $('button.btn_edit').click(function(){    
+  $('button.btn_edit').click(function () {
     $('#myModalEdit').modal('show');
 
   })
@@ -25,13 +25,14 @@ $(document).ready(function () {
   })
 
   //click delete
-  $('button.btn_delete').click(function(){
+  $('button.btn_delete').click(function () {
     const id = $(this).attr('data-id');
+    const image = $(this).attr('data-image');
 
     if (confirm("Bạn có chắc chắn muốn xoá sản phẩm này - " + id) == true) {
       $.ajax({
         type: 'DELETE',
-        url: 'http://localhost:3000/Storey/deleted/' + id,
+        url: 'http://localhost:3000/Storey/deleted/' + id + "/" + image,
         success: function (response) {
           $('.delete-row' + id).remove('div')
           alert("Xoá thành công ")
@@ -43,7 +44,7 @@ $(document).ready(function () {
     } else {
       console.log("404")
     }
-  }) 
+  })
 
 
 
