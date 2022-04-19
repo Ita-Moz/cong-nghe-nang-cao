@@ -1,0 +1,41 @@
+<% array.forEach(element => { %>
+    <div class="products-row">
+        <button class="cell-more-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="feather feather-more-vertical">
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="12" cy="19" r="1" />
+            </svg>
+        </button>
+        <div class="product-cell image">
+            <img src="../public/image/<%- element.image  %> " alt="product">
+            <span>
+                <%- element.name %>
+            </span>
+        </div>
+        <div class="product-cell category"><span class="cell-label">Category:</span>
+            <%- element.describe %>
+        </div>
+        <div class="product-cell status-cell">
+            <span class="cell-label">Status:</span>
+            <span class="status active">Active</span>
+        </div>
+        <div class="product-cell stock"><span class="cell-label">Stock:</span>
+            <%- element.soluong %>
+        </div>
+        <div class="product-cell price"><span class="cell-label">Price:</span>
+            <%- element.price %>
+        </div>
+        <div class="product-cell sales d-flex justify-content-around"><span
+                class="cell-label ">Sales:</span>
+            <button data-id="<%- element._id  %>" class="btn btn-primary btn_edit" data-toggle="modal"
+                data-target="#myModal">
+                <i class="fa-solid fa-pen-to-square"></i></button>
+            <button data-id="<%- element._id  %>" data-image="<%- element.image  %>"
+                class="btn btn-danger btn_delete">
+                <i class="fa-solid fa-trash"></i></button>
+        </div>
+    </div>
+<% }) %>

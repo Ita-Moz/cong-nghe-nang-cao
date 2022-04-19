@@ -7,7 +7,7 @@ router.get('/add', controller.add_show);
 router.post('/add',controller.add);
 router.delete('/deleted/:id/:image',controller.deleted);
 router.get('/search/:name',controller.search);
-router.put('/update/:id',controller.search);
+router.put('/update/:id',controller.update);
 
 //------------------------------
 

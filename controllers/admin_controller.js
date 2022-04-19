@@ -22,15 +22,15 @@ var upload = multer({
     }
 }).single("txtFile");
 
-exports.show = (req, res) => {
-    products.find((err, data) => {
-        if (err) {
-            res.json("Error hien thi")
-        } else {
-            res.render('dashboard', { danhsach: data })
-        }
-    })
-}
+exports.show = async (req, res) => {
+    try{
+      const allProducts = await products.find();
+      return res.status(200).render('dashboard',{danhsach: allProducts});
+    }
+    catch(err){
+        return err;
+    }
+  }
 exports.add_show = (req, res) => {
     res.render('admin')
 }
@@ -59,59 +59,49 @@ exports.add = (req, res) => {
 
     });
 }
-exports.search = (req, res) => {
-    products.find(
-        {
-            name: req.params.name
-        }
-    )
-        .then(data => {
-            if (data.length != 0) {
-                console.log(data)
-                let rowSearch = "";
-                data.forEach((item, index) => {
-                    rowSearch +=
-                        `
-                    <div class="products-row "><div class="product-cell image"><img src="../public/image/${item.image} " alt="product"><span>${item.name} </span> </div> <div class="product-cell category"><span class="cell-label">Category:</span> ${item.describe} </div> <div class="product-cell status-cell"> <span class="cell-label">Status:</span> <span class="status active">Active</span> </div> <div class="product-cell stock"><span class="cell-label">Stock:</span> ${item.soluong} </div><div class="product-cell price"><span class="cell-label">Price:</span> ${item.price} </div><div class="product-cell sales d-flex justify-content-around"><span class="cell-label ">Sales:</span><button class="btn btn-primary btn_edit"><i class="fa-solid fa-pen-to-square"></i></button><button data-id="${item._id}" class="btn btn-danger btn_delete"><i class="fa-solid fa-trash"></i></button></div></div>
-                    `
-                });
-                res.send(rowSearch)
-            } else {
-                res.send("----------Không tìm thấy kết quả nào-------")
-            }
-        })
-        .catch(err => {
-            console.log("Error search" + err)
-        })
 
+exports.search = async (req, res) => {
+    try{
+      let allSearch = await products.find({name:req.params.name});
+      return res.status(200).render('search_admin',{array: allSearch});
+    }
+    catch(err){
+        return err;
+    }
+  }
 
+exports.deleted = async (req, res) => {
+
+    try{
+        await products.deleteMany({_id: req.params.id})
+        const productsList =  await this.show(req,res);
+         // GỠ FILE TRÊN SERVER
+         let path =`./public/image/${req.params.image}`
+         fs.unlink(path, function (err) {
+
+             if (err && err.code == 'ENOENT') {
+                 // Lỗi tìm không thấy tệp, tệp không tồn tại.
+                 console.info("File doesn't exist, won't remove it.");
+             } else if (err) {
+                 // Đã xảy ra lỗi khi xóa tệp
+                 console.error("Error occurred while trying to remove file");
+             } else {
+                 console.info(`Đã xoá 1 ảnh trong server`);
+             }
+         });
+       
+        return await res.status(200).send();
+    }
+    catch(err){
+        return res.json(err);
+    }
+    
 }
 
-exports.deleted = (req, res) => {
-
-    products.deleteMany({
-        _id: req.params.id
-    }, (err, success) => {
-        if (err) {
-            console.log("Error" + err);
-        } else {
-            // GỠ FILE TRÊN SERVER
-            let path = `./public/image/${req.params.image}`
-            fs.unlink(path, function (err) {
-
-                if (err && err.code == 'ENOENT') {
-                    // Lỗi tìm không thấy tệp, tệp không tồn tại.
-                    console.info("File doesn't exist, won't remove it.");
-                } else if (err) {
-                    // Đã xảy ra lỗi khi xóa tệp
-                    console.error("Error occurred while trying to remove file");
-                } else {
-                    console.info(`Đã xoá 1 ảnh trong server`);
-                }
-            });
-            res.status(200).send();
-        }
-    });
+exports.update = (req, res) => {
+    products.findByIdAndUpdate(req.params.id,(data)=>{
+        console.log(data)
+    })
 
 }
 
